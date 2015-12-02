@@ -41,3 +41,15 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 .controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 }])
+
+.controller('MembersCtrl', ['$scope', '$http', function($scope, $http) {
+
+}])
+
+.controller('ProjectsCtrl', ['$scope', '$http', function($scope, $http) {
+
+}])
+
+.controller('FormCtrl', ['$scope', '$http', function($scope, $http) {
+
+}])

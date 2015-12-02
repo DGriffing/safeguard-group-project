@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="SafeguardApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,9 @@
 
     <!-- Partials Inserted Here -->
     <main>
-        <div ui-view></div>
+        <div class="container">
+            <div ui-view></div>
+        </div>
     </main>
 
     <footer>
@@ -39,7 +41,7 @@
 
     <!-- load external libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="lib/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="library/ui-bootstrap-tpls-0.14.3.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
 
     <!-- load our script -->
