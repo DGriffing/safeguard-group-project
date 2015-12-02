@@ -1,0 +1,23 @@
+[
+  {
+    "id": "team-members",
+    "name": "Shefali Haldar",
+    "title": "PhD Student",
+    "bio": "Shefali is a PhD student in Biomedical and Health Informatics at the University of Washington School of Medicine. She received her Bachelor's degree in Information Science and Biology from Syracuse University, and has previously worked as a researcher and systems analyst in a number of healthcare organizations. Her current research interests include using informatics tools in the inpatient setting for improving health literacy and patient safety.",
+    "image": "img/shefali_mishra.jpg"
+  },
+  {
+    "id": "team-members",
+    "name": "Andrew Miller",
+    "title": "PhD Student",
+    "bio": "Andrew D Miller, Ph.D., is a National Library of Medicine Postdoctoral Fellow in the University of Washington’s Biomedical and Health Informatics Division. He studies how social computing technology can empower people to help each other with their health and wellness. Dr. Miller earned both an MS in Human-Computer Interaction and PhD in Human-Centered Computing from Georgia Tech, and a BA in Cognitive Science from Occidental College. At the University of Washington, Dr. Miller studies how information technologies can better support patients and caregivers—both in the inpatient setting and outside the hospital—and leads the participatory design activities for Patients As Safeguards.",
+    "image": "img/andrew_miller.jpg"
+  },
+  {
+    "id": "team-members",
+    "name": "Sonali Mishra",
+    "title": "PhD Student",
+    "bio": "Sonali Mishra is a PhD student at the University of Washington Information School. Before coming to UW, she worked at the University of Michigan Libraries as an Information Architect. She earned her MSI degree at the University of Michigan School of Information in 2011. You can read more about her projects at: http://srmishra.com",
+    "image": "img/sonali_mishra.jpg"
+  }
+]
