@@ -11,10 +11,10 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 			controller: 'HomeCtrl'
 		})
 
-		.state('form', {
-			url: '/Form', 
-			templateUrl: 'partials/form.html',
-			controller: 'FormCtrl'
+		.state('members', {
+			url: '/Members', 
+			templateUrl: 'partials/members.html',
+			controller: 'MembersCtrl'
 		})
 
 		.state('projects', {
@@ -23,10 +23,15 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 			controller: 'ProjectsCtrl'
 		})
 
-		.state('members', {
-			url: '/Members', 
-			templateUrl: 'partials/members.html',
-			controller: 'MembersCtrl'
+		.state('sponsors', {
+			url: '/#sponsors', 
+			templateUrl: 'partials/home.html'
+		})
+
+		.state('form', {
+			url: '/Participate', 
+			templateUrl: 'partials/form.html',
+			controller: 'FormCtrl'
 		})
 
 	// Sends all false paths to home
