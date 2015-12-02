@@ -8,7 +8,7 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 		.state('home', {
 			url: '/',
 			templateUrl: 'partials/home.html',
-			controller: 'HomepageCtrl'
+			controller: 'HomeCtrl'
 		})
 
 		.state('form', {
@@ -33,6 +33,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 	$urlRouterProvider.otherwise('/');
 })
 
-.controller('HomepageCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 }])
