@@ -1,11 +1,11 @@
 <h1>MEMBERS</h1>
 
-<div class="floated_img">
 <body>
-	<div class="floated_img">
-    <img class="teamPics" ng-src="{{members.image}}">
-    <p>{{members.bio}}</p>
-</div>
-
-
-
+	<div class="container">
+		<div id="memberInfo" ng-repeat="member in members | orderBy: 'name'">
+		    <img class="teamPics" ng-src="{{member.image}}">
+		    <p>{{member.name}}</p>
+		    <p>{{member.bio}}</p>
+	    </div> 
+	</div>	
+</body>	

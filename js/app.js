@@ -43,7 +43,10 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 }])
 
 .controller('MembersCtrl', ['$scope', '$http', function($scope, $http) {
-
+	console.log("is this working");
+	$http.get('data/members.json').then(function(response) {
+ 		$scope.members = response.data;
+ 	});
 }])
 
 .controller('ProjectsCtrl', ['$scope', '$http', function($scope, $http) {
