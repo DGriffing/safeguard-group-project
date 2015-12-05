@@ -4,8 +4,8 @@
 	<div class="container">
 		<div id="memberInfo" ng-repeat="member in members | orderBy: 'name'">
 		    <img class="teamPics" ng-src="{{member.image}}">
-		    <p>{{member.name}}</p>
-		    <p>{{member.bio}}</p>
+		    <h2>{{member.name}}</h2>
+			<p>{{member.bio}}</p>
 	    </div> 
 	</div>	
 </body>	

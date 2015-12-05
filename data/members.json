@@ -18,6 +18,27 @@
     "name": "Sonali Mishra",
     "title": "PhD Student",
     "bio": "Sonali Mishra is a PhD student at the University of Washington Information School. Before coming to UW, she worked at the University of Michigan Libraries as an Information Architect. She earned her MSI degree at the University of Michigan School of Information in 2011. You can read more about her projects at: http://srmishra.com",
-    "image": "img/sonali_mishra.jpg" 
+    "image": "img/sonali_mishra.jpg"
+  },
+  {
+    "id": "members",
+    "name": "Kelsey Aiello",
+    "title": "Student",
+    "bio": "Kelsey Aiello is a first year Informatics student in the University of Washington Information School. She is interested in focusing her studies on human computer interaction and user research, particularly in a healthcare setting. In her free time Kelsey enjoys golfing, snowboarding, and exploring the city of Seattle.",
+    "image": "img/kelsey_aiello.jpg" 
+  },
+  {
+    "id": "members",
+    "name": "Alex Filipkowski",
+    "title": "Masters Student",
+    "bio": "Alex is a second year master's candidate studying data science at the school of information. As a caregiver for a family member, he is passionate about keeping patients safe and informed. In his free time he enjoys running, skiing, cycling, and hiking.",
+    "image": "img/alex_filipkowski.jpg" 
+  },
+  {
+    "id": "members",
+    "name": "Maher Khelifi",
+    "title": "PhD Student",
+    "bio": "Maher earned his PharmD in 2012. He started his pharmaceutical studies in Senegal, University of Cheikh Anta Diop then he joined the Faculty of pharmacy in Tunisia where he graduated. Believing in the imminent need of adopting Biomedical informatics in developing countries, he joined BHI with the Sponsorship of the Fulbright program. During his master’s studies in BHI,  he joined Professor Wanda Pratt’s research group-Patient-As-Safeguards-to work on understanding patients’ information needs. Maher earned a Ms degree in Biomedical and health informatics. His Ms thesis research focused on Design Recommendation for Pharmacogenomics Clinical Decision Support Systems. Currently,  He is continuing his work as a PhD student in BHI and as a Research Assistant in the Patient-As-Safeguards project.",
+    "image": "img/maher_khelifi.png" 
   }
 ]
