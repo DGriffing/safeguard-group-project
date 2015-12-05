@@ -1,3 +1,39 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:700);
+nav {
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background: linear-gradient(to right, #57bacc, #ffffff); }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 15px;
+    padding-top: 0.5em;
+    font-family: "Quicksand", sans-serif; }
+  nav li {
+    display: inline-block; }
+  nav a {
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none; }
+  nav a:hover {
+    color: #666666; }
+  nav a:link {
+    text-decoration: none; }
+
+footer {
+  background: linear-gradient(to left, #57bacc, #ffffff);
+  font-size: 14px;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  color: #666666;
+  text-align: left; }
+  footer a {
+    text-decoration: none;
+    color: #666666; }
 
 /*# sourceMappingURL=main.css.map */
