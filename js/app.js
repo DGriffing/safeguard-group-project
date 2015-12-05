@@ -17,6 +17,11 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 			controller: 'MembersCtrl'
 		})
 
+		.state('memberBios', {
+			templateUrl: 'partials/memberBios.html',
+			controller: 'BiosCtrl'
+		})
+
 		.state('projects', {
 			url: '/Projects', 
 			templateUrl: 'partials/projects.html',
@@ -42,7 +47,19 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 
 }])
 
-.controller('MembersCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('MembersCtrl', ['$scope', '$http', '$uibModal', function($scope, $http, $uibModal) {
+	$http.get('data/members.json').then(function(response) {
+ 		$scope.members = response.data;
+ 	});
+
+ 	$scope.memberInfo = function() {
+	 	var modalInstance = $uibModal.open({
+			templateUrl: 'partials/memberBios.html'
+		});
+	}	
+}])
+
+.controller('BiosCtrl', ['$scope', '$http', function($scope, $http) {
 	$http.get('data/members.json').then(function(response) {
  		$scope.members = response.data;
  	});

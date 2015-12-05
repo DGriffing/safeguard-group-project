@@ -42,7 +42,8 @@ footer {
 h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
-p {
-  font-family: "Raleway", sans-serif; }
+.content {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px; }
 
 /*# sourceMappingURL=main.css.map */
