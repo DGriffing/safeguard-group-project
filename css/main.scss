@@ -1,10 +1,12 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 $nav-color: #57bacc;
 $hover-color: #666666;
 $text-color: #ffffff; 
-$content-font:'Quicksand', sans-serif;
+$header-font:'Quicksand', sans-serif;
+$content-font: 'Raleway', sans-serif;
 
 nav {
 
@@ -20,7 +22,7 @@ nav {
 		list-style: none; 
 		margin-left: 15px;
 		padding-top: 0.5em;
-		font-family: $content-font;
+		font-family: $header-font;
 
 	}
 
@@ -35,6 +37,10 @@ nav {
 		text-decoration: none;
 	}
 
+	a:visited {
+		color: $text-color;
+	}
+
 	a:hover{
 		color: $hover-color;
 	}
@@ -46,15 +52,23 @@ nav {
 
 footer {
 
-	background: linear-gradient(to left, $nav-color, $text-color); 
-	font-size: 14px;
+	background: linear-gradient(to right, $nav-color, $text-color); 
+	font-size: 12px;
 	padding: 1em;
-	font-family: $content-font;
-	color: $hover-color;
+	font-family: $header-font;
+	color: $text-color;
 	text-align: left;
 
 	a {
 		text-decoration: none;
-		color: $hover-color;
+		color: $text-color;
 	}
+}
+
+h1, h2 {
+	font-family: $header-font;
+}
+
+p {
+	font-family: $content-font;
 }
