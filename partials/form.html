@@ -1,1 +1,68 @@
-<h1>FORM</h1>
+<div ng-controller="FormCtrl">
+	<form name="signUpForm" class="form-horizontal" novalidate>
+
+		<div class="alert alert-success" ng-show="signUpForm.$submitted" id="Success">
+			<strong>Success!</strong> Your form has been submitted.
+		</div>
+
+		<h1>Want To Participate?</h1>
+		<!-- First Name Input -->
+		<div class="form-group">
+			<label for="firstName">First Name:</label>
+			<input type="text" name="firstName" id="firstName" class="form-control" ng-model="firstName" placeholder="Your first name" required>
+		</div>
+		<!-- Last Name Input -->
+		<div class="form-group" ng-class="{'has-error': signUpForm.lastName.$invalid}">
+			<label for="lastName">Last Name:</label>
+			<input type="text" name="lastName" id="lastName" class="form-control" ng-model="lastName" placeholder="Your last name"required>
+			<p id="last-name-error" ng-show="!signUpForm.lastName.$pristine && signUpForm.lastName.$invalid"class="help-block">we need to know your last name</p>
+		</div>  
+
+		<!-- Birthday Input -->
+		<div class="form-group">
+			<label for="birthdate">Birthdate</label>
+			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="MM/D/YYYY" required>
+			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">User too young to apply!</span>
+		</div>
+		<!-- Email Input -->
+		<div class="form-group" ng-class="{'has-error': signUpForm.email.$invalid}">
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" placeholder="Your email address" class="form-control" ng-model="email">
+			<span id="email-error"class="help-block" ng-show="signUpForm.email.$error.email">Please enter a valid email address</span>
+		</div>
+		<!-- Password Input -->
+		<div ng-app="app" class="form-group" ng-class="{'has-error': signUpForm.password.$invalid}">
+			<label for="password">Password:</label>
+			<input autofocus type="password" name="password" placeholder="Password "id="password" class="form-control" ng-model="password" required >   
+		</div>
+
+		<!-- Password Error messages -->
+		<div class="errors">
+			<div class="invalid" id="password-error" ng-show="signUpForm.password.$touched">
+				<span ng-show="signUpForm.password.$error.required">Please enter a password</span>
+			</div>
+		</div>
+
+		<!-- Confirm Password Input -->
+		<div class="form-group" ng-class="{'has-error': signUpForm.confirmpassword.$invalid}">
+			<label for="confirmpassword">Confirm Password:</label>
+			<input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" class="form-control" ng-model="confirmpassword" required ng-change="passwordConfirmed()" >
+		</div>   
+
+		<!-- Confirm Password Error messages -->
+		<div class="errors">
+			<div class="invalid" id="password-error1" ng-show="signUpForm.confirmpassword.$touched">
+				<span ng-show="signUpForm.confirmpassword.$error.required">Please re-enter your password</span>
+			</div>
+		</div>
+		<div class="errors">
+			<div class="invalid" id="password-error2" ng-show="!passwordConfirmed()">
+				<span class="help-block">Passwords must match</span>
+			</div>
+		</div>  
+		<!-- Reset Button -->
+		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
+		<!-- Submit Button -->
+		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Me Up!</button>
+		</form>
+</div>
