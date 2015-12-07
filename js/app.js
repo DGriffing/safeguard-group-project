@@ -145,4 +145,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
   	//otherwise the user is under 13, return false 
   	return false;
   }
+  $('#star2').raty();
+
 }])

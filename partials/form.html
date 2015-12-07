@@ -64,13 +64,11 @@
 			<label for="natureOfStay">Nature of Stay:</label>
 			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="natureOfStay" placeholder="Tell us more" required>
 			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">What was your nature of stay?</p>			
-		</div>			
-		<!-- Confirm Password Error messages -->
-		<div class="errors">
-			<div class="invalid" id="password-error1" ng-show="signUpForm.confirmpassword.$touched">
-				<span ng-show="signUpForm.confirmpassword.$error.required">Please re-enter your password</span>
-			</div>
-		</div>
+		</div>	
+		<div class="form-group">
+		<div id="star2"></div>
+		</div>	
+
 		<!-- Reset Button -->
 		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
 		<!-- Submit Button -->
