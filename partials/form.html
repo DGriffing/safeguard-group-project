@@ -1,3 +1,13 @@
+<!-- 
+	First name
+	Last name
+	Caregiver/patient
+	birthdate
+	date of hospital stay
+	nature of stay
+	rate experience
+ -->
+
 <div ng-controller="FormCtrl">
 	<form name="signUpForm" class="form-horizontal" novalidate>
 
@@ -6,7 +16,15 @@
 		</div>
 
 		<h1>Want To Participate?</h1>
-		<p>Please start by entering in the correct information below!</p>
+		<div class="container">
+			<h3>What would participating look like?</h3>
+			<p>As a participant with 'Patients as Safeguards', you would be involved in either a interview or survey. Then six lucky participants will be chosen at random to participate in a design and prototyping phase for our newly developed technology. Lastly, twenty participants will be picked to test our final prototype, and offer their observations in an interview.</p>
+			<p>The feedback from our participants is crutial for developing an application that would cut down on patient harm, and thus are invaluable. We thank you for taking the time to fill out this form.</p>
+		</div>
+
+		<p>Reminder: Participants must have been a patient/caregiver who had an overnight stay in a hospital within the past year.</p>
+
+		<p>Caregiver is anyone who was closely involved with the patient at the time of the hospital stay, eg: Parent, Spouse, Child</p>
 		<!-- First Name Input -->
 		<div class="form-group">
 			<label for="firstName">First Name:</label>
@@ -62,9 +80,9 @@
 			</div>
 		</div>  
 		<!-- Reset Button -->
-		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset!</button>
+		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
 		<!-- Submit Button -->
-		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Me Up!</button>
+		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Up</button>
 		</form>
 		<p>Thanks for Signing up!</p>
 </div>
