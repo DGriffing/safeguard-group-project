@@ -54,16 +54,16 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 
  	$scope.memberInfo = function() {
 	 	var modalInstance = $uibModal.open({
-			templateUrl: 'partials/memberBios.html'
+			templateUrl: 'partials/members.html'
 		});
 	}	
 }])
 
-.controller('BiosCtrl', ['$scope', '$http', function($scope, $http) {
-	$http.get('data/members.json').then(function(response) {
- 		$scope.members = response.data;
- 	});
-}])
+// .controller('BiosCtrl', ['$scope', '$http', function($scope, $http) {
+// 	$http.get('data/members.json').then(function(response) {
+//  		$scope.members = response.data;
+//  	});
+// }])
 
 .controller('ProjectsCtrl', ['$scope', '$http', function($scope, $http) {
 

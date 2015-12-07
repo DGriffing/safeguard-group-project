@@ -5,17 +5,19 @@
 		<div id="memberInfo" ng-repeat="member in members | orderBy: 'name'">
 		    <img class="teamPics" ng-src="{{member.image}}">
 		    <br>
-		    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="memberInfo()">{{member.name}}</button>
-			<!-- <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-			  <div class="modal-dialog modal-sm">
-			    <div class="modal-content">
-			    	<h2>{{member.name}} {{member.title}}</h2>
-			    	<p class="content">{{member.bio}}</p>  
-			    </div>
-			  </div>
-			</div> -->
-		    <!-- <h2>{{member.name}}</h2> -->
-			<!-- <p class="content">{{member.bio}}</p> -->
+		    <div ng-controller="MembersCtrl">
+			    <script type="text/ng-template" id="members.html">
+			        <div class="modal-header">
+			            <h2 class="modal-title">{{member.name}} {{member.title}}</h2>
+			        </div>
+			        <div class="modal-body">
+			        	<p>{{member.bio}}</p>
+			        </div>
+			    </script>
+			    <button type="button" class="btn btn-default" ng-click="open('sm')">{{member.name}}</button>
+			</div>
+		    <!-- <h2>{{member.name}}</h2>
+			<p class="content">{{member.bio}}</p> -->
 	    </div> 
 	</div>	
 </body>	
