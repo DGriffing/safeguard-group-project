@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
+angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'])
 
 .config(function($stateProvider, $urlRouterProvider){
 
@@ -69,7 +69,30 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 
 }])
 
-.controller('FormCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('FormCtrl', ['$scope', '$http', '$firebaseArray', '$firebaseObject', '$firebaseAuth', function($scope, $http, $firebaseArray, $firebaseObject, $firebaseAuth) {
+
+
+  // Star rating for Patient Stay
+  var starScore;
+   $('#star').raty({
+      // click: function(score, evt){
+      //     starScore = score;
+      // }
+  });
+
+  var ref = new Firebase("https://safeguard.firebaseio.com");
+
+  var usersRef = ref.child('users');
+  $scope.users = $firebaseObject(usersRef);
+  var Auth = $firebaseAuth(ref);
+  $scope.newUser = {}; //holds info about the new user we're creating
+
+  $scope.signUp = function() {
+
+  }
+
+
+
 	//Detects that the form is submitted
   $scope.submitForm = function(form){
   	if(form.$valid) {
@@ -139,12 +162,10 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
   	//If user's birthdate year is 2002 and the month of the user's bday is the same
   	//as this year's current month and the the user's day of birth already passed or is 
   	//today in this current year, return true
-  	if(userYear == 2002 && userMonth == monthToday && dayToday >= userDay) {
+  	if(userYear == 2002 && userMonth == monthToday && dayToday > userDay + 1) {
   		return true; 
   	}
   	//otherwise the user is under 13, return false 
   	return false;
   }
-  $('#star2').raty();
-
 }])

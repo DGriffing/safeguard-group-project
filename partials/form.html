@@ -1,13 +1,3 @@
-<!-- 
-	First name
-	Last name
-	Caregiver/patient
-	birthdate
-	date of hospital stay
-	nature of stay
-	rate experience
- -->
-
 <div ng-controller="FormCtrl">
 	<form name="signUpForm" class="form-horizontal" novalidate>
 
@@ -22,10 +12,10 @@
 			<p class="content">Reminder: </p>
 			<ul>
 				<li class="content">Participants must have been a patient/caregiver who had an overnight stay in a hospital within the past year.</li>
-				<li class="content">Caregiver is anyone who was closely involved with the patient at the time of the hospital stay, eg: Parent, Spouse, Child</li>
-				<li class="content">Patients must be 7 years of age or older</li>
+				<li class="content">Caregiver is anyone who was closely involved with the patient at the time of the hospital stay, eg: Parent, Spouse, Child.</li>
+				<li class="content">Patients must be 7 years of age or older.</li>
 			</ul>
-			<p class="content">Feedback from our participants is crutial for developing an application that will cut down on patient harm, and thus is invaluable. We thank you for taking the time to fill out this form, signing up for Patients as Safeguards</p>
+			<p class="content">Feedback from our participants is crutial for developing an application that will cut down on patient harm, and thus is invaluable. We thank you for taking the time to fill out this form, signing up for Patients as Safeguards.</p>
 		</div>
 
 		<!-- First Name Input -->
@@ -42,8 +32,13 @@
 		</div>
 		<!-- Caregiver or Patient input -->
 		<div class="form-group">
-			<label for="caregiverOrPatient">Caregiver Or Patient:</label>
-			<input type="text" name="caregiverOrPatient" id="caregiverOrPatient" class="form-control" ng-model="caregiverOrPatient" placeholder="Put the Caregiver or Patient name here" required>
+			<label for="caregiverOrPatient">Your Role (Caregiver Or Patient):</label> <br>
+			<label class="radio-inline">
+		      	<input type="radio" name="optradio">Caregiver
+		    </label>
+		    <label class="radio-inline">
+		      	<input type="radio" name="optradio">Patient
+		    </label>
 			<p id="caregiverOrPatient-error" ng-show="!signUpForm.caregiverOrPatient.$pristine && signUpForm.caregiverOrPatient.$invalid"class="help-block">Please enter the information above</p>			
 		</div>				
 		<!-- Birthday Input -->
@@ -56,8 +51,8 @@
 		<!-- Date spent Overnight in Hospital Input-->
 		<div class="form-group">
 		  	<label for="dateSpent">Date spent Overnight in Hospital</label>
-			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="dateSpent">
-			<span id="dateSpent-error" class="help-block" ng-show="!signUpForm.dateSpent.$pristine &&dateSpentInput(dateSpent) == false">Please enter a date in the past 2 years of yesterdays date!</span>		
+			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="dateSpent" placeholder="mm/dd/yyyy">
+			<span id="dateSpent-error" class="help-block" ng-show="!signUpForm.dateSpent.$pristine &&dateSpentInput(dateSpent) == false">Please enter a date within the past 2 years.</span>		
 		</div>
 		<!-- Nature of stay  -->
 		<div class="form-group">
@@ -65,10 +60,11 @@
 			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="natureOfStay" placeholder="Tell us more" required>
 			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">What was your nature of stay?</p>			
 		</div>	
+		<!-- Rate your Stay -->
 		<div class="form-group">
-		<div id="star2"></div>
-		</div>	
-
+			<label for="rating">Please Rate Your Stay:</label>
+			<div id="star"></div>
+		</div>
 		<!-- Reset Button -->
 		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
 		<!-- Submit Button -->
