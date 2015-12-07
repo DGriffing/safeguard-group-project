@@ -1,6 +1,7 @@
-<div class="modal-dialog modal-sm">
-	<div id="memberInfo" ng-repeat="member in members | orderBy: 'name'">
-		<h2>{{member.name}} {{member.title}}</h2>
-		<p class="content">{{member.bio}}</p>  
-	</div>
-</div> 
+<div class="modal-body">
+	<h2 class="modalHeader">{{selectedMember.name}}</h2>
+	<p id="position">{{selectedMember.title}}</p>
+	<p class="content">{{selectedMember.bio}}</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" type="button" ng-click="close()">Close</button> 

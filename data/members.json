@@ -9,7 +9,7 @@
   {
     "id": "members",
     "name": "Andrew Miller",
-    "title": "PhD Student",
+    "title": "Postdoctoral Fellow",
     "bio": "Andrew D Miller, Ph.D., is a National Library of Medicine Postdoctoral Fellow in the University of Washington’s Biomedical and Health Informatics Division. He studies how social computing technology can empower people to help each other with their health and wellness. Dr. Miller earned both an MS in Human-Computer Interaction and PhD in Human-Centered Computing from Georgia Tech, and a BA in Cognitive Science from Occidental College. At the University of Washington, Dr. Miller studies how information technologies can better support patients and caregivers—both in the inpatient setting and outside the hospital—and leads the participatory design activities for Patients As Safeguards.",
     "image": "img/andrew_miller.jpg"
   },
@@ -23,14 +23,14 @@
   {
     "id": "members",
     "name": "Kelsey Aiello",
-    "title": "Student",
+    "title": "Undergraduate Student",
     "bio": "Kelsey Aiello is a first year Informatics student in the University of Washington Information School. She is interested in focusing her studies on human computer interaction and user research, particularly in a healthcare setting. In her free time Kelsey enjoys golfing, snowboarding, and exploring the city of Seattle.",
     "image": "img/kelsey_aiello.jpg" 
   },
   {
     "id": "members",
     "name": "Alex Filipkowski",
-    "title": "Masters Student",
+    "title": "Master's Student",
     "bio": "Alex is a second year master's candidate studying data science at the school of information. As a caregiver for a family member, he is passionate about keeping patients safe and informed. In his free time he enjoys running, skiing, cycling, and hiking.",
     "image": "img/alex_filipkowski.jpg" 
   },

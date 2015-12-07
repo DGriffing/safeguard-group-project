@@ -47,23 +47,28 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 }])
 
-.controller('MembersCtrl', ['$scope', '$http', '$uibModal', function($scope, $http, $uibModal) {
+.controller('MembersCtrl', ['$scope', '$http', '$uibModal', '$filter', '$stateParams', function($scope, $http, $uibModal, $filter, $stateParams) {
 	$http.get('data/members.json').then(function(response) {
  		$scope.members = response.data;
- 	});
+  });  
 
- 	$scope.memberInfo = function() {
-	 	var modalInstance = $uibModal.open({
-			templateUrl: 'partials/members.html'
-		});
-	}	
+  $scope.memberInfo = function(obj) {
+    console.log(obj);
+    $scope.selectedMember = obj;
+    var modalInstance = $uibModal.open({
+      templateUrl: 'partials/memberBios.html',
+      controller: 'BiosCtrl',
+      scope: $scope
+    });
+  }
 }])
 
-// .controller('BiosCtrl', ['$scope', '$http', function($scope, $http) {
-// 	$http.get('data/members.json').then(function(response) {
-//  		$scope.members = response.data;
-//  	});
-// }])
+.controller('BiosCtrl', ['$scope', '$http', '$uibModalInstance', function($scope, $http, $uibModalInstance) { 
+   $scope.close = function () {
+      $uibModalInstance.dismiss('close');
+   };
+}])
+
 
 .controller('ProjectsCtrl', ['$scope', '$http', function($scope, $http) {
 
