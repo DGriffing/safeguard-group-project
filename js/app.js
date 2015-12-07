@@ -3,7 +3,6 @@
 angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'])
 
 .config(function($stateProvider, $urlRouterProvider){
-
 	$stateProvider
 		.state('home', {
 			url: '/',
@@ -75,7 +74,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 }])
 
 .controller('FormCtrl', ['$scope', '$http', '$firebaseArray', '$firebaseObject', '$firebaseAuth', function($scope, $http, $firebaseArray, $firebaseObject, $firebaseAuth) {
-
 
   // Star rating for Patient Stay
   var starScore;

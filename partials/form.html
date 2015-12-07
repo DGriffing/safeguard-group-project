@@ -1,10 +1,8 @@
 <div ng-controller="FormCtrl">
 	<form name="signUpForm" class="form-horizontal" novalidate>
-
 <!-- 		<div class="alert alert-success" ng-show="signUpForm.$submitted" id="Success">
 			<strong>Success!</strong> Your form has been submitted.
 		</div> -->
-
 		<h1>Want To Join Our Study?</h1>
 		<div class="well well-sm">
 			<h2>What would participating look like?</h2>
@@ -24,12 +22,14 @@
 			<input type="text" name="firstName" id="firstName" class="form-control" ng-model="firstName" placeholder="Your name" required>
 			<p id="first-name-error" ng-show="!signUpForm.firstName.$pristine && signUpForm.firstName.$invalid"class="help-block">We need to know your name</p>			
 		</div>
+
 		<!-- Email Input -->
 		<div class="form-group" ng-class="{'has-error': signUpForm.email.$invalid}">
 			<label for="email">Email:</label>
 			<input type="email" name="email" id="email" placeholder="Your email address" class="form-control" ng-model="email">
 			<span id="email-error"class="help-block" ng-show="signUpForm.email.$error.email">Please enter a valid email address</span>
 		</div>
+
 		<!-- Caregiver or Patient input -->
 		<div class="form-group">
 			<label for="caregiverOrPatient">Your Role (Caregiver Or Patient):</label> <br>
@@ -40,8 +40,9 @@
 		      	<input type="radio" id="patient" name="optradio">Patient
 		    </label>
 			<p id="caregiverOrPatient-error" ng-show="!signUpForm.caregiverOrPatient.$pristine && signUpForm.caregiverOrPatient.$invalid"class="help-block">Please enter the information above</p>			
-		</div>				
-		<!-- Birthday Input -->
+		</div>		
+
+		<!-- Birthdate Input -->
 		<div class="form-group">
 			<label for="birthdate">Birthdate</label>
 			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="mm/dd/yyyy" required>
@@ -54,20 +55,24 @@
 			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="dateSpent" placeholder="mm/dd/yyyy">
 			<span id="dateSpent-error" class="help-block" ng-show="!signUpForm.dateSpent.$pristine &&dateSpentInput(dateSpent) == false">Please enter a date within the past 2 years.</span>		
 		</div>
+
 		<!-- Nature of stay  -->
 		<div class="form-group">
 			<label for="natureOfStay">Nature of Stay:</label>
 			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="natureOfStay" placeholder="Tell us more" required>
 			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">What was your nature of stay?</p>			
 		</div>	
+
 		<!-- Rate your Stay -->
 		<div class="form-group">
 			<label for="rating">Please Rate Your Stay:</label>
 			<div id="star"></div>
 		</div>
+
 		<!-- Reset Button -->
 		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
 		<!-- Submit Button -->
+
 		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm); reset(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Up</button>
-		</form>
+	</form>
 </div>
