@@ -1,6 +1,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+/*Still need to figure out how to make it look good on mobile phones*/
 nav {
   width: 100%;
   left: 0px;

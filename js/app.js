@@ -84,22 +84,39 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
   $scope.reset = function(form) {
   	$scope.email = "";
   	$scope.firstName = "";
-  	$scope.lastName = "";
+    $scope.dateSpent = "";
   	$scope.birthdate = "";
-  	$scope.password = "";
-  	$scope.confirmpassword = "";
+  	$scope.caregiverOrPatient = "";
+    $scope.natureOfStay = "";
   }
-  //Compare's password and confirm password fields to see if they equal each other
-  $scope.passwordConfirmed = function() {
-  	if($scope.password === $scope.confirmpassword) { //if the two are the same, return true
-  		$scope.signUpForm.confirmpassword.$setValidity('$invalid', true);
-  		return true;
-  	}
-  	else {
-  		$scope.signUpForm.confirmpassword.$setValidity('$invalid', false);
-  		return false;
-  	}
+  $scope.dateSpentInput = function(dateSpent){
+    var nowDate = new Date(); 
+    var usersdateSpent= new Date(dateSpent);
+    var dayToday = nowDate.getDate();
+    var usersDay = usersdateSpent.getDate();
+    var monToday = nowDate.getMonth();
+    var userMonth = usersdateSpent.getMonth();
+    var yToday = nowDate.getFullYear();
+    var usersYear = usersdateSpent.getFullYear();
+    //If user's dateSpent year is over 2 years before today's year, return false
+    if(yToday - usersYear > 2) { 
+      return false;
+    }
+    //If user's dateSpent year is 2013 and the user's month has already 
+    //passed in this calendar year, return true. 
+    if(usersYear == yToday - 2 && monToday > userMonth) {
+      return false; 
+    }
+    //If user's dateSpent year is 2 years and the month of the user's bday is the same
+    //as this year's current month and the the user's day of birth already passed or is 
+    //today in this current year, return true
+    if(usersYear == yToday - 2 && userMonth == monToday && dayToday >= usersDay) {
+      return false; 
+    }
+    //otherwise the user is within the 2 year requirement, return true;
+    return true;
   }
+
   //Compares user's birthday to today's date and checks if user is 13+ 
   $scope.birthdateInput = function(birthdate){
   	var todaysDate = new Date(); 
