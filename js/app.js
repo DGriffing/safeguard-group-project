@@ -95,7 +95,14 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   $scope.signUp = function() {
 
   }
-
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
 
 
 	//Detects that the form is submitted
@@ -108,15 +115,19 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   	}
  
   }
+
   // This resets all of the fields on the form
   $scope.reset = function(form) {
   	$scope.email = "";
   	$scope.firstName = "";
     $scope.dateSpent = "";
   	$scope.birthdate = "";
-  	$scope.caregiverOrPatient = "";
+  	document.getElementById('caregiver').checked = false;
+    document.getElementById('patient').checked = false;
     $scope.natureOfStay = "";
+    $('#star').raty({ starScore: 0 });
   }
+  
   $scope.dateSpentInput = function(dateSpent){
     var nowDate = new Date(); 
     var usersdateSpent= new Date(dateSpent);

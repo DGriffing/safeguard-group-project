@@ -34,10 +34,10 @@
 		<div class="form-group">
 			<label for="caregiverOrPatient">Your Role (Caregiver Or Patient):</label> <br>
 			<label class="radio-inline">
-		      	<input type="radio" name="optradio">Caregiver
+		      	<input type="radio" id="caregiver" name="optradio">Caregiver
 		    </label>
 		    <label class="radio-inline">
-		      	<input type="radio" name="optradio">Patient
+		      	<input type="radio" id="patient" name="optradio">Patient
 		    </label>
 			<p id="caregiverOrPatient-error" ng-show="!signUpForm.caregiverOrPatient.$pristine && signUpForm.caregiverOrPatient.$invalid"class="help-block">Please enter the information above</p>			
 		</div>				
@@ -68,6 +68,6 @@
 		<!-- Reset Button -->
 		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
 		<!-- Submit Button -->
-		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Up</button>
+		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm); reset(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Up</button>
 		</form>
 </div>
