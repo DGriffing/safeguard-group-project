@@ -80,9 +80,9 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   // Star rating for Patient Stay
   var starScore;
    $('#star').raty({
-      // click: function(score, evt){
-      //     starScore = score;
-      // }
+      click: function(score, evt){
+          starScore = score;
+      }
   });
 
   var ref = new Firebase("https://safeguard.firebaseio.com");
