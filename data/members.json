@@ -39,6 +39,20 @@
     "name": "Maher Khelifi",
     "title": "PhD Student",
     "bio": "Maher earned his PharmD in 2012. He started his pharmaceutical studies in Senegal, University of Cheikh Anta Diop then he joined the Faculty of pharmacy in Tunisia where he graduated. Believing in the imminent need of adopting Biomedical informatics in developing countries, he joined BHI with the Sponsorship of the Fulbright program. During his master’s studies in BHI,  he joined Professor Wanda Pratt’s research group-Patient-As-Safeguards-to work on understanding patients’ information needs. Maher earned a Ms degree in Biomedical and health informatics. His Ms thesis research focused on Design Recommendation for Pharmacogenomics Clinical Decision Support Systems. Currently,  He is continuing his work as a PhD student in BHI and as a Research Assistant in the Patient-As-Safeguards project.",
-    "image": "img/maher_khelifi.png" 
+    "image": "img/maher_khelifi.jpg" 
+  },
+  {
+    "id": "members",
+    "name": "Dr. Barry Aaronson",
+    "title": "Medical Doctor",
+    "bio": "Dr. Aaronson received his MD degree from the George Washington University School of Medicine in Washington, D.C. He completed his residency in Internal Medicine at Walter Reed Army Medical Center, Washington, D.C. Following residency he served as Chief Resident at Walter Reed and then General Internist. In 1997 he started the Hospitalist program at Tacoma General and in 1999 started the Hospitalist program at Virginia Mason Medical Center. He completed his NLM Post-Doctoral Fellowship within the Division of Biomedical and Health InformaMcs at the University of Washington in 2009 and now splits his Mme at Virginia Mason Medical Center between work as a Hospitalist and as the Associate Medical Director for Clinical InformaMcs. In 2014 he was in the first group to become Board CerMfied in Clinical InformaMcs. He has been elected to the Alpha Omega Alpha Medical Honor Society, is a Fellow of the American College of Physicians and a Senior Fellow in Hospital Medicine through the Society of Hospital Medicine.",
+    "image": "img/barry_aaronsonNEW.jpg" 
+  },
+  {
+    "id": "members",
+    "name": "Dr. Ari Pollack",
+    "title": "Pediatric Nephrologist",
+    "bio": "Dr. Ari Pollack is a pediatric nephrologist completing his clinical training at Seattle Children’s Hospital as well as his Masters of Science in Information Management from the University of Washington’s Information School. His research interests focus on improving the delivery of clinical information to both patients and healthcare professionals to improve clinical outcomes through information visualization. His prior work experience includes time at Seattle Children’s Hospital working on its electronic health record and developing novel interfaces to improve clinician workflows as well as general pediatrician. In 2014, Dr. Pollack was part of the first group of clinicians to become board certified in Clinical Informatics. In addition he teaches a course on electronic health records for the University of Washington’s Clinical Informatics and Patient Centered Technology master’s program. He obtained his BS and MA in Biology from University of California, Los Angeles and his MD degree from Tulane University.",
+    "image": "img/ari_pollack.jpg" 
   }
 ]

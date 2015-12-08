@@ -3,8 +3,10 @@
 <body>
 	<div class="container">
 		<div id="memberInfo" ng-repeat="member in members | orderBy: 'name'">
-		    <img class="teamPics" ng-src="{{member.image}}">
-		    <h2 class="modalHeader" ng-click="memberInfo(member)">{{member.name}}</h2>
+			<div class="col-md-4">
+			    <img class="teamPics" ng-src="{{member.image}}">
+			    <h2 class="modalHeader" ng-click="memberInfo(member)">{{member.name}}</h2>
+			</div>    
 	    </div> 
 	</div>	
 </body>	
