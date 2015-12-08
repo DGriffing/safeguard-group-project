@@ -85,22 +85,35 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
   var ref = new Firebase("https://safeguard.firebaseio.com");
 
-  var usersRef = ref.child('users');
-  $scope.users = $firebaseObject(usersRef);
+  var participantsRef = ref.child('participants');
+  $scope.participants = $firebaseObject(participantsRef);
   var Auth = $firebaseAuth(ref);
-  $scope.newUser = {}; //holds info about the new user we're creating
+  $scope.newParticipant = {}; //holds info about the new user we're creating
 
+
+  //
   $scope.signUp = function() {
+    $scope.participants.$add({
+      name: 
 
+      // text:$scope.newParticipant,
+      // userId: $scope.userId,
+      // likes:0,
+      time:Firebase.ServerValue.TIMESTAMP
+    }).then(function(){
+      $scope.newChirp = '';
+    })
   }
-$(document).ready(function() {
-  $(window).keydown(function(event){
-    if(event.keyCode == 13) {
-      event.preventDefault();
-      return false;
-    }
+
+  //
+  $(document).ready(function() {
+    $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    });
   });
-});
 
 
 	//Detects that the form is submitted
@@ -126,6 +139,7 @@ $(document).ready(function() {
     $('#star').raty({ starScore: 0 });
   }
   
+  //
   $scope.dateSpentInput = function(dateSpent){
     var nowDate = new Date(); 
     var usersdateSpent= new Date(dateSpent);
@@ -182,4 +196,5 @@ $(document).ready(function() {
   	//otherwise the user is under 13, return false 
   	return false;
   }
+
 }])

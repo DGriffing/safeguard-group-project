@@ -18,9 +18,9 @@
 
 		<!-- First Name Input -->
 		<div class="form-group">
-			<label for="firstName">Name:</label>
-			<input type="text" name="firstName" id="firstName" class="form-control" ng-model="firstName" placeholder="Your name" required>
-			<p id="first-name-error" ng-show="!signUpForm.firstName.$pristine && signUpForm.firstName.$invalid"class="help-block">We need to know your name</p>			
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" class="form-control" ng-model="participant.name" placeholder="Your name" required>
+			<p id="name-error" ng-show="!signUpForm.firstName.$pristine && signUpForm.name.$invalid"class="help-block">We need to know your name</p>			
 		</div>
 
 		<!-- Email Input -->
