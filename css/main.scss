@@ -110,6 +110,16 @@ h1, h2 {
 	font-size: 18px;
 }
 
+.teamPics {
+	border-radius: 8px;
+	border: solid 6px $hover-color;
+}
+
+#tagline {
+	font-family: $content-font;
+	font-size: 18px;
+}
+
 @media (max-width: 768px) { 
 
 	#homepage-image {
