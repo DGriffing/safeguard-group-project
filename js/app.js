@@ -95,23 +95,33 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 
   //
-  $scope.signUp = function() {
+  // $scope.signUp = function() {
 
-    $scope.participants.$add({
-      name: $scope.partcipant.name,
-      email: $scope.participant.email,
-      role: document.querySelector('input[name="role"]:checked').value,
-      birthdate: $scope.birthdate,
-      stayDate: $scope.participant.dateSpent,
-      natureOfStay: $scope.participant.natureOfStay,
-      rating: starScore,
-      time: Firebase.ServerValue.TIMESTAMP
-    })
+  //   console.log("name = " + $scope.name);
+  //   console.log("email = " + $scope.email);
+  //   console.log("role = " + document.querySelector('input[name="role"]:checked').value);
+  //   console.log("birthdate = " + $scope.birthdate);
+  //   console.log("date stayed = " + $scope.stayDate);
+  //   console.log("nature of visit = " + $scope.natureOfStay);
+  //   console.log("rating = " + starScore);
+  //   console.log("timestamp = " + Firebase.ServerValue.TIMESTAMP);
 
-    .then(function(){
-      $scope.newParticipant = '';
-    })
-  }
+  //   $scope.participants.$add({
+  //     name: $scope.name,
+  //     email: $scope.email,
+  //     role: document.querySelector('input[name="role"]:checked').value,
+  //     birthdate: $scope.birthdate,
+  //     stayDate: $scope.dateSpent,
+  //     natureOfStay: $scope.natureOfStay,
+  //     rating: starScore,
+  //     time: Firebase.ServerValue.TIMESTAMP
+  //   })
+
+
+  //   .then(function(){
+  //     $scope.newParticipant = '';
+  //   })
+  // }
 
   $(document).ready(function() {
     $(window).keydown(function(event){
@@ -126,7 +136,29 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 	//Detects that the form is submitted
   $scope.submitForm = function(obj){
   	if(obj.$valid) {
+      console.log("name = " + $scope.name);
+      console.log("email = " + $scope.email);
+      console.log("role = " + document.querySelector('input[name="role"]:checked').value);
+      console.log("birthdate = " + $scope.birthdate);
+      console.log("date stayed = " + $scope.dateSpent);
+      console.log("nature of visit = " + $scope.natureOfStay);
+      console.log("rating = " + starScore);
+      console.log("timestamp = " + Firebase.ServerValue.TIMESTAMP);
       console.log(obj);
+
+
+      $scope.participants.$add({
+        name: $scope.name,
+        email: $scope.email,
+        role: document.querySelector('input[name="role"]:checked').value,
+        birthdate: $scope.birthdate,
+        stayDate: $scope.dateSpent,
+        natureOfStay: $scope.natureOfStay,
+        rating: starScore,
+        time: Firebase.ServerValue.TIMESTAMP
+      })
+
+
       $scope.selectedMember = obj;
       var modalInstance = $uibModal.open({
         templateUrl: 'partials/confirmation.html',

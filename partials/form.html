@@ -19,14 +19,14 @@
 		<!-- First Name Input -->
 		<div class="form-group">
 			<label for="name">Name:</label>
-			<input type="text" name="name" id="name" class="form-control" ng-model="participant.name" placeholder="Your name" required>
+			<input type="text" name="name" id="name" class="form-control" ng-model="name" placeholder="Your name" required>
 			<p id="name-error" ng-show="!signUpForm.firstName.$pristine && signUpForm.name.$invalid"class="help-block">We need to know your name</p>			
 		</div>
 
 		<!-- Email Input -->
 		<div class="form-group" ng-class="{'has-error': signUpForm.email.$invalid}">
 			<label for="email">Email:</label>
-			<input type="email" name="email" id="email" placeholder="Your email address" class="form-control" ng-model="participant.email">
+			<input type="email" name="email" id="email" placeholder="Your email address" class="form-control" ng-model="email">
 			<span id="email-error"class="help-block" ng-show="signUpForm.email.$error.email">Please enter a valid email address</span>
 		</div>
 
@@ -52,14 +52,14 @@
 		<!-- Date spent Overnight in Hospital Input-->
 		<div class="form-group">
 		  	<label for="dateSpent">Date spent Overnight in Hospital</label>
-			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="participant.dateSpent" placeholder="mm/dd/yyyy">
+			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="dateSpent" placeholder="mm/dd/yyyy">
 			<span id="dateSpent-error" class="help-block" ng-show="!signUpForm.dateSpent.$pristine &&dateSpentInput(dateSpent) == false">Please enter a date within the past 2 years.</span>		
 		</div>
 
 		<!-- Nature of stay  -->
 		<div class="form-group">
 			<label for="natureOfStay">Nature of Stay:</label>
-			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="participant.natureOfStay" placeholder="Tell us more" required>
+			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="natureOfStay" placeholder="Tell us more" required>
 			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">What was your nature of stay?</p>			
 		</div>	
 
