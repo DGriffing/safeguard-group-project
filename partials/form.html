@@ -45,8 +45,13 @@
 		<!-- Birthdate Input -->
 		<div class="form-group">
 			<label for="birthdate">Birthdate</label>
+
 			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="participant.birthdate" placeholder="mm/dd/yyyy" required>
 			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">User too young to apply!</span>
+
+			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="mm/dd/yyyy" required>
+			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">We need your birthdate!</span>
+
 		</div> 
 
 		<!-- Date spent Overnight in Hospital Input-->

@@ -37,6 +37,10 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 			templateUrl: 'partials/form.html',
 			controller: 'FormCtrl'
 		})
+    .state('confirmation', {
+      templateUrl: 'partials/confirmation.html',
+      controller: 'ConfirmationCtrl'
+    })
 
 	// Sends all false paths to home
 	$urlRouterProvider.otherwise('/');
@@ -73,7 +77,7 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 }])
 
-.controller('FormCtrl', ['$scope', '$http', '$firebaseArray', '$firebaseObject', '$firebaseAuth', function($scope, $http, $firebaseArray, $firebaseObject, $firebaseAuth) {
+.controller('FormCtrl', ['$scope', '$http', '$uibModal', '$firebaseArray', '$firebaseObject', '$firebaseAuth', function($scope, $http, $uibModal, $firebaseArray, $firebaseObject, $firebaseAuth) {
 
   // Star rating for Patient Stay
   var starScore;
@@ -82,7 +86,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
           starScore = score;
       }
   });
-
   var ref = new Firebase("https://safeguard.firebaseio.com");
 
   var participantsRef = ref.child('participants');
@@ -111,7 +114,9 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
     })
   }
 
+
   //
+
   $(document).ready(function() {
     $(window).keydown(function(event){
       if(event.keyCode == 13) {
@@ -123,14 +128,19 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 
 	//Detects that the form is submitted
-  $scope.submitForm = function(form){
-  	if(form.$valid) {
-  		console.log('form is valid, YAY!');
+  $scope.submitForm = function(obj){
+  	if(obj.$valid) {
+      console.log(obj);
+      $scope.selectedMember = obj;
+      var modalInstance = $uibModal.open({
+        templateUrl: 'partials/confirmation.html',
+        controller: 'ConfirmationCtrl',
+        scope: $scope
+      });
   	}
   	else {
   		console.log('form is invalid, BOOO!');
   	}
- 
   }
 
   // This resets all of the fields on the form
@@ -202,5 +212,12 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   	//otherwise the user is under 13, return false 
   	return false;
   }
+
+}])
+
+.controller('ConfirmationCtrl', ['$scope', '$http', '$uibModalInstance', function($scope, $http, $uibModalInstance) { 
+   $scope.close = function () {
+      $uibModalInstance.dismiss('close');
+   };
 
 }])
