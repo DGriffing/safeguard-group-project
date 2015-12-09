@@ -133,16 +133,16 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
       console.log("timestamp = " + Firebase.ServerValue.TIMESTAMP);
       console.log(obj);
 
-      $scope.participants.$add({
-        name: $scope.name,
-        email: $scope.email,
-        role: document.querySelector('input[name="role"]:checked').value,
-        birthdate: $scope.birthdate,
-        stayDate: $scope.dateSpent,
-        natureOfStay: $scope.natureOfStay,
-        rating: starScore,
-        time: Firebase.ServerValue.TIMESTAMP
-      })
+      // $scope.participants.$add({
+      //   name: $scope.name,
+      //   email: $scope.email,
+      //   role: document.querySelector('input[name="role"]:checked').value,
+      //   birthdate: $scope.birthdate,
+      //   stayDate: $scope.dateSpent,
+      //   natureOfStay: $scope.natureOfStay,
+      //   rating: starScore,
+      //   time: Firebase.ServerValue.TIMESTAMP
+      // })
 
 
       $scope.selectedMember = obj;
