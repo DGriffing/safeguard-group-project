@@ -33,11 +33,11 @@
 		<!-- Caregiver or Patient input -->
 		<div class="form-group">
 			<label for="roles">Your Role (Caregiver Or Patient):</label> <br>
-			<label class="radio-inline">
-		      	<input type="radio" name="role" value="caregiver" checked="checked">Caregiver
-		    </label>
 		    <label class="radio-inline">
-		      	<input type="radio" name="role" value="patient">Patient
+		      	<input type="radio" name="role" value="patient" checked="checked">Patient
+		    </label>
+			<label class="radio-inline">
+		      	<input type="radio" name="role" value="caregiver">Caregiver
 		    </label>
 			<p id="roles-error" ng-show="!signUpForm.roles.$pristine && signUpForm.roles.$invalid"class="help-block">Please enter the information above</p>			
 		</div>		
@@ -47,9 +47,6 @@
 			<label for="birthdate">Birthdate</label>
 
 			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="participant.birthdate" placeholder="mm/dd/yyyy" required>
-			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">User too young to apply!</span>
-
-			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="mm/dd/yyyy" required>
 			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">We need your birthdate!</span>
 
 		</div> 
