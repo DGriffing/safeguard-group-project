@@ -93,15 +93,21 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
   //
   $scope.signUp = function() {
-    $scope.participants.$add({
-      name: 
 
-      // text:$scope.newParticipant,
-      // userId: $scope.userId,
-      // likes:0,
+    $scope.participants.$add({
+      name: $scope.partcipant.name,
+      email: $scope.participant.email,
+      role: document.querySelector('input[name="role"]:checked').value,
+      // role: $('input[name="role"]:checked').val();
+      birthdate: $scope.participant.birthdate,
+      stayDate: $scope.participant.dateSpent,
+      natureOfStay: $scope.participant.natureOfStay,
+      rating: starScore,
       time:Firebase.ServerValue.TIMESTAMP
-    }).then(function(){
-      $scope.newChirp = '';
+    })
+
+    .then(function(){
+      $scope.newParticipant = '';
     })
   }
 

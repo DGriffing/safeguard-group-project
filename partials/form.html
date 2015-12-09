@@ -26,40 +26,40 @@
 		<!-- Email Input -->
 		<div class="form-group" ng-class="{'has-error': signUpForm.email.$invalid}">
 			<label for="email">Email:</label>
-			<input type="email" name="email" id="email" placeholder="Your email address" class="form-control" ng-model="email">
+			<input type="email" name="email" id="email" placeholder="Your email address" class="form-control" ng-model="participant.email">
 			<span id="email-error"class="help-block" ng-show="signUpForm.email.$error.email">Please enter a valid email address</span>
 		</div>
 
 		<!-- Caregiver or Patient input -->
 		<div class="form-group">
-			<label for="caregiverOrPatient">Your Role (Caregiver Or Patient):</label> <br>
+			<label for="roles">Your Role (Caregiver Or Patient):</label> <br>
 			<label class="radio-inline">
-		      	<input type="radio" id="caregiver" name="optradio">Caregiver
+		      	<input type="radio" name="role" value="caregiver" checked="checked">Caregiver
 		    </label>
 		    <label class="radio-inline">
-		      	<input type="radio" id="patient" name="optradio">Patient
+		      	<input type="radio" name="role" value="patient">Patient
 		    </label>
-			<p id="caregiverOrPatient-error" ng-show="!signUpForm.caregiverOrPatient.$pristine && signUpForm.caregiverOrPatient.$invalid"class="help-block">Please enter the information above</p>			
+			<p id="roles-error" ng-show="!signUpForm.roles.$pristine && signUpForm.roles.$invalid"class="help-block">Please enter the information above</p>			
 		</div>		
 
 		<!-- Birthdate Input -->
 		<div class="form-group">
 			<label for="birthdate">Birthdate</label>
-			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="mm/dd/yyyy" required>
+			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="participant.birthdate" placeholder="mm/dd/yyyy" required>
 			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">User too young to apply!</span>
 		</div> 
 
 		<!-- Date spent Overnight in Hospital Input-->
 		<div class="form-group">
 		  	<label for="dateSpent">Date spent Overnight in Hospital</label>
-			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="dateSpent" placeholder="mm/dd/yyyy">
+			<input type="date" name="dateSpent" id="dateSpent" class="form-control" ng-model="participant.dateSpent" placeholder="mm/dd/yyyy">
 			<span id="dateSpent-error" class="help-block" ng-show="!signUpForm.dateSpent.$pristine &&dateSpentInput(dateSpent) == false">Please enter a date within the past 2 years.</span>		
 		</div>
 
 		<!-- Nature of stay  -->
 		<div class="form-group">
 			<label for="natureOfStay">Nature of Stay:</label>
-			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="natureOfStay" placeholder="Tell us more" required>
+			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="participant.natureOfStay" placeholder="Tell us more" required>
 			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">What was your nature of stay?</p>			
 		</div>	
 
