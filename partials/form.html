@@ -32,7 +32,7 @@
 
 		<!-- Caregiver or Patient input -->
 		<div class="form-group">
-			<label for="roles">Your Role (Caregiver Or Patient):</label> <br>
+			<label for="roles">Your Role (Patient Or Caregiver):</label> <br>
 		    <label class="radio-inline">
 		      	<input type="radio" name="role" value="patient" checked="checked">Patient
 		    </label>
@@ -45,7 +45,7 @@
 		<!-- Birthdate Input -->
 		<div class="form-group">
 			<label for="birthdate">Birthdate</label>
-			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="participant.birthdate" placeholder="mm/dd/yyyy" required>
+			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="mm/dd/yyyy" required>
 			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">We need your birthdate!</span>
 		</div> 
 

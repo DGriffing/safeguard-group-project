@@ -102,7 +102,7 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
       email: $scope.participant.email,
       role: document.querySelector('input[name="role"]:checked').value,
       // role: $('input[name="role"]:checked').val();
-      birthdate: $scope.participant.birthdate,
+      birthdate: $scope.birthdate,
       stayDate: $scope.participant.dateSpent,
       natureOfStay: $scope.participant.natureOfStay,
       rating: starScore,
@@ -113,9 +113,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
       $scope.newParticipant = '';
     })
   }
-
-
-  //
 
   $(document).ready(function() {
     $(window).keydown(function(event){
@@ -149,8 +146,8 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   	$scope.firstName = "";
     $scope.dateSpent = "";
   	$scope.birthdate = "";
-  	document.getElementById('caregiver').checked = false;
     document.getElementById('patient').checked = false;
+    document.getElementById('caregiver').checked = false;    
     $scope.natureOfStay = "";
     $('#star').raty({ starScore: 0 });
   }
@@ -219,5 +216,4 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
    $scope.close = function () {
       $uibModalInstance.dismiss('close');
    };
-
 }])
