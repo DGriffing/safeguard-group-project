@@ -96,7 +96,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
   //
   // $scope.signUp = function() {
-
   //   console.log("name = " + $scope.name);
   //   console.log("email = " + $scope.email);
   //   console.log("role = " + document.querySelector('input[name="role"]:checked').value);
@@ -105,18 +104,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   //   console.log("nature of visit = " + $scope.natureOfStay);
   //   console.log("rating = " + starScore);
   //   console.log("timestamp = " + Firebase.ServerValue.TIMESTAMP);
-
-  //   $scope.participants.$add({
-  //     name: $scope.name,
-  //     email: $scope.email,
-  //     role: document.querySelector('input[name="role"]:checked').value,
-  //     birthdate: $scope.birthdate,
-  //     stayDate: $scope.dateSpent,
-  //     natureOfStay: $scope.natureOfStay,
-  //     rating: starScore,
-  //     time: Firebase.ServerValue.TIMESTAMP
-  //   })
-
 
   //   .then(function(){
   //     $scope.newParticipant = '';
@@ -146,7 +133,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
       console.log("timestamp = " + Firebase.ServerValue.TIMESTAMP);
       console.log(obj);
 
-
       $scope.participants.$add({
         name: $scope.name,
         email: $scope.email,
@@ -174,7 +160,7 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   // This resets all of the fields on the form
   $scope.reset = function(form) {
   	$scope.email = "";
-  	$scope.firstName = "";
+  	$scope.name = "";
     $scope.dateSpent = "";
   	$scope.birthdate = "";
     document.getElementById('patient').checked = false;
