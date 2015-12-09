@@ -122,12 +122,14 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 	//Detects that the form is submitted
   $scope.submitForm = function(obj){
+    var time = $scope.dateSpent.getTime();
+    var date = Date(time);
   	if(obj.$valid) {
       console.log("name = " + $scope.name);
       console.log("email = " + $scope.email);
       console.log("role = " + document.querySelector('input[name="role"]:checked').value);
       console.log("birthdate = " + $scope.birthdate);
-      console.log("date stayed = " + $scope.dateSpent);
+      console.log("date stayed = " + date);
       console.log("nature of visit = " + $scope.natureOfStay);
       console.log("rating = " + starScore);
       console.log("timestamp = " + Firebase.ServerValue.TIMESTAMP);
@@ -138,7 +140,7 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
         email: $scope.email,
         role: document.querySelector('input[name="role"]:checked').value,
         birthdate: $scope.birthdate,
-        stayDate: $scope.dateSpent,
+        stayDate: date,
         natureOfStay: $scope.natureOfStay,
         rating: starScore,
         time: Firebase.ServerValue.TIMESTAMP
@@ -156,6 +158,8 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
   		console.log('form is invalid, BOOO!');
   	}
   }
+
+
 
   // This resets all of the fields on the form
   $scope.reset = function(form) {
