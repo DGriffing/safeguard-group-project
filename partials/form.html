@@ -34,10 +34,10 @@
 		<div class="form-group">
 			<label for="roles">Your Role (Patient Or Caregiver):</label> <br>
 		    <label class="radio-inline">
-		      	<input type="radio" name="role" value="patient" checked="checked">Patient
+		      	<input type="radio" name="role" id="patient" value="patient" checked="checked">Patient
 		    </label>
 			<label class="radio-inline">
-		      	<input type="radio" name="role" value="caregiver">Caregiver
+		      	<input type="radio" name="role" id="caregiver" value="caregiver">Caregiver
 		    </label>
 			<p id="roles-error" ng-show="!signUpForm.roles.$pristine && signUpForm.roles.$invalid"class="help-block">Please enter the information above</p>			
 		</div>		

@@ -101,12 +101,11 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
       name: $scope.partcipant.name,
       email: $scope.participant.email,
       role: document.querySelector('input[name="role"]:checked').value,
-      // role: $('input[name="role"]:checked').val();
       birthdate: $scope.birthdate,
       stayDate: $scope.participant.dateSpent,
       natureOfStay: $scope.participant.natureOfStay,
       rating: starScore,
-      time:Firebase.ServerValue.TIMESTAMP
+      time: Firebase.ServerValue.TIMESTAMP
     })
 
     .then(function(){
