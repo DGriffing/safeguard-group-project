@@ -6,8 +6,8 @@
 
 
 $nav-color: #57bacc;
-$hover-color: #666666;
-$text-color: #ffffff; 
+$hover-color: #ffffff;
+$text-color: black; 
 $header-font:'Quicksand', sans-serif;
 $content-font: 'Raleway', sans-serif;
 $title-font: 'Montserrat', sans-serif;
@@ -28,16 +28,17 @@ nav {
 	left: 0px; 
 	top: 0px;
 	z-index: 1;
-	background: linear-gradient(to right, $nav-color, $text-color); 
+	background: linear-gradient(to right, $nav-color, $hover-color); 
 
 	#logo {
 		font-family: $title-font;
 		font-size: 14px;
+		color: $hover-color;
 		margin: 0;
-		padding: 0;
+		padding: 10px 16px;
 		list-style: none; 
 		margin-left: 15px;
-		padding-top: 0.5em;
+		padding-top: 1.2em;
 	}
 	
 	ul {
@@ -75,7 +76,7 @@ nav {
 }	
 
 footer {
-	background: linear-gradient(to right, $nav-color, $text-color); 
+	background: linear-gradient(to right, $nav-color, $hover-color); 
 	font-size: 12px;
 	padding: 1em;
 	font-family: $header-font;
@@ -90,9 +91,18 @@ footer {
 	}
 }
 
-#title {
+.title {
 	font-family: $title-font;
 	font-size: 42px;
+	text-shadow:1px 1px 0 $nav-color,
+		-1px -1px 0 $nav-color,
+		1px -1px 0 $nav-color,
+		-1px 1px 0 $nav-color,
+		0px 1px 0 $nav-color,
+		1px 0px 0 $nav-color,
+		0px -1px 0 $nav-color,
+		-1px 0px 0 $nav-color,
+		1px 1px 3px $nav-color;
 }
 
 #description {
@@ -105,7 +115,7 @@ h1, h2 {
 }
 
 .modalHeader:hover {
-    color: $hover-color; 
+    color: $text-color; 
 }
 
 #sign-me-up-button {
@@ -150,7 +160,7 @@ h1, h2 {
 
 .teamPics {
 	border-radius: 8px;
-	border: solid 6px $hover-color;
+	border: solid 6px $text-color;
 }
 
 #tagline {

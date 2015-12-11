@@ -19,11 +19,12 @@ nav {
   nav #logo {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+    color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 10px 16px;
     list-style: none;
     margin-left: 15px;
-    padding-top: 0.5em; }
+    padding-top: 1.2em; }
   nav ul {
     margin: 0;
     padding: 0;
@@ -34,14 +35,14 @@ nav {
   nav li {
     display: inline-block; }
   nav a {
-    color: #ffffff;
+    color: black;
     display: inline-block;
     padding: 10px 16px;
     text-decoration: none; }
   nav a:visited {
-    color: #ffffff; }
+    color: black; }
   nav a:hover {
-    color: #666666; }
+    color: #ffffff; }
   nav a:link {
     text-decoration: none; }
 
@@ -50,18 +51,19 @@ footer {
   font-size: 12px;
   padding: 1em;
   font-family: "Quicksand", sans-serif;
-  color: #ffffff;
+  color: black;
   text-align: left;
   position: absolute;
   bottom: 0;
   width: 100%; }
   footer a {
     text-decoration: none;
-    color: #ffffff; }
+    color: black; }
 
-#title {
+.title {
   font-family: "Montserrat", sans-serif;
-  font-size: 42px; }
+  font-size: 42px;
+  text-shadow: 1px 1px 0 #57bacc, -1px -1px 0 #57bacc, 1px -1px 0 #57bacc, -1px 1px 0 #57bacc, 0px 1px 0 #57bacc, 1px 0px 0 #57bacc, 0px -1px 0 #57bacc, -1px 0px 0 #57bacc, 1px 1px 3px #57bacc; }
 
 #description {
   font-size: 26px;
@@ -71,7 +73,7 @@ h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
 .modalHeader:hover {
-  color: #666666; }
+  color: black; }
 
 #sign-me-up-button {
   background: #57bacc; }
@@ -106,7 +108,7 @@ h1, h2 {
 
 .teamPics {
   border-radius: 8px;
-  border: solid 6px #666666; }
+  border: solid 6px black; }
 
 #tagline {
   font-family: "Raleway", sans-serif;
