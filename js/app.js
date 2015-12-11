@@ -138,8 +138,6 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
         }
     }
 
-
-
     // Resets all of the fields in the form
     $scope.reset = function(form) {
         $scope.email = "";
