@@ -20,7 +20,7 @@
 		<div class="form-group">
 			<label for="name">Name:</label>
 			<input type="text" name="name" id="name" class="form-control" ng-model="name" placeholder="Your name" required>
-			<p id="name-error" ng-show="!signUpForm.name.$pristine && signUpForm.name.$invalid"class="help-block">We need to know your name</p>			
+			<p id="name-error" ng-show="!signUpForm.name.$pristine && signUpForm.name.$invalid"class="help-block">Please enter your name</p>	
 		</div>
 
 		<!-- Email Input -->
@@ -39,14 +39,14 @@
 			<label class="radio-inline">
 		      	<input type="radio" name="role" id="caregiver" value="caregiver">Caregiver
 		    </label>
-			<p id="roles-error" ng-show="!signUpForm.roles.$pristine && signUpForm.roles.$invalid"class="help-block">Please enter the information above</p>			
+			<p id="roles-error" ng-show="!signUpForm.roles.$pristine && signUpForm.roles.$invalid"class="help-block">Please tell us if you were the patient or their caregiver</p>			
 		</div>		
 
 		<!-- Birthdate Input -->
 		<div class="form-group">
 			<label for="birthdate">Birthdate</label>
 			<input type="text" name="birthdate" id="birthdate" class="form-control" ng-model="birthdate" placeholder="mm/dd/yyyy" required>
-			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">We need your birthdate!</span>
+			<span id="birthdate-error" class="help-block" ng-show="!signUpForm.birthdate.$pristine &&birthdateInput(birthdate) == false">Patient must be at least seven to participate!</span>
 		</div> 
 
 		<!-- Date spent Overnight in Hospital Input-->
@@ -60,7 +60,7 @@
 		<div class="form-group">
 			<label for="natureOfStay">Nature of Stay:</label>
 			<input type="text" name="natureOfStay" id="natureOfStay" class="form-control" ng-model="natureOfStay" placeholder="Tell us more" required>
-			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">What was your nature of stay?</p>			
+			<p id="natureOfStay-error" ng-show="!signUpForm.natureOfStay.$pristine && signUpForm.natureOfStay.$invalid"class="help-block">Why were you in the hospital?</p>			
 		</div>	
 
 		<!-- Rate your Stay -->
