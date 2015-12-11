@@ -54,12 +54,7 @@ h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
 #sign-me-up-button {
-
   background: #57bacc; }
-
-  color: black;
-  background: linear-gradient(to right, #57bacc, #ffffff); }
-
 
 .content {
   font-family: "Raleway", sans-serif;
@@ -72,6 +67,10 @@ h1, h2 {
 .well-sm {
   background-color: #f2f2f2;
   border-radius: 10px; }
+
+#homepage-image {
+  width: 1110px;
+  height: 515px; }
 
 #homepage-link {
   color: #57bacc; }
@@ -99,6 +98,14 @@ h1, h2 {
 
   main {
     margin-bottom: 100px; } }
+@media (max-width: 992px) {
+  #homepage-image {
+    width: 680px;
+    height: 375px; } }
+@media (min-width: 992px) and (max-width: 1200px) {
+  #homepage-image {
+    width: 910px;
+    height: 450px; } }
 #reset-button {
   margin-bottom: 40px; }
 
