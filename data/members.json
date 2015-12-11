@@ -54,5 +54,12 @@
     "title": "Pediatric Nephrologist",
     "bio": "Dr. Ari Pollack is a pediatric nephrologist completing his clinical training at Seattle Children’s Hospital as well as his Masters of Science in Information Management from the University of Washington’s Information School. His research interests focus on improving the delivery of clinical information to both patients and healthcare professionals to improve clinical outcomes through information visualization. His prior work experience includes time at Seattle Children’s Hospital working on its electronic health record and developing novel interfaces to improve clinician workflows as well as general pediatrician. In 2014, Dr. Pollack was part of the first group of clinicians to become board certified in Clinical Informatics. In addition he teaches a course on electronic health records for the University of Washington’s Clinical Informatics and Patient Centered Technology master’s program. He obtained his BS and MA in Biology from University of California, Los Angeles and his MD degree from Tulane University.",
     "image": "img/ari_pollack.jpg" 
+  },
+  {
+   "id": "members",
+    "name": "Wanda Pratt",
+    "title": "Professor, P.I.",
+    "bio": "Wanda Pratt is a Professor in the Information School with an adjunct appointment in the Division of Biomedical & Health Informatics in the Medical School at the University of Washington. She received her Ph.D. in Medical Informatics from Stanford University, her M.S. in Computer Science from the University of Texas, and her B.S. in Electrical and Computer Engineering from the University of Kansas.  Her research focuses on understanding patients’ needs and designing new technologies to address those needs. She has worked with people coping with a variety of chronic diseases, such as cancer, diabetes, asthma, and heart disease. Dr. Pratt has received best paper awards from the American Medical Informatics Association (AMIA), the ACM CHI Conference on Human Factors in Computing Systems, and the Journal of the American Society of Information Science & Technology (JASIS&T). Her research has been funded by the National Science Foundation, the National Library of Medicine, the Agency for Healthcare Research & Quality, the Robert Woods Johnson Foundation, Intel, and Microsoft. Dr. Pratt is a fellow of the American College of Medical Informatics.",
+    "image": "img/wanda_pratt.jpg" 
   }
 ]
