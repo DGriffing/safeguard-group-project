@@ -15,6 +15,7 @@ nav {
   left: 0px;
   top: 0px;
   z-index: 1;
+  font-family: "Quicksand", sans-serif;
   background: linear-gradient(to right, #57bacc, #ffffff); }
   nav #logo {
     font-family: "Montserrat", sans-serif;
@@ -31,7 +32,7 @@ nav {
     list-style: none;
     margin-left: 15px;
     padding-top: 0.5em;
-    font-family: "Quicksand", sans-serif; }
+     }
   nav li {
     display: inline-block; }
   nav a {
@@ -138,7 +139,7 @@ h1, h2 {
     height: 375px; }
   main {
     margin-bottom: 100px; } }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) {
   #hamburger {
     display: none;
   }

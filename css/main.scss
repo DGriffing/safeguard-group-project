@@ -28,6 +28,7 @@ nav {
 	left: 0px; 
 	top: 0px;
 	z-index: 1;
+	font-family: "Quicksand", sans-serif;
 	background: linear-gradient(to right, $nav-color, $hover-color); 
 
 	#logo {
@@ -47,7 +48,6 @@ nav {
 		list-style: none; 
 		margin-left: 15px;
 		padding-top: 0.5em;
-		font-family: $header-font;
 
 	}
 
