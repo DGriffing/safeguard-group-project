@@ -6,7 +6,7 @@
 		<div id="memberInfo" ng-repeat="member in members | orderBy: 'name'">
 			<div class="col-md-4">
 			    <img class="teamPics" ng-src="{{member.image}}">
-			    <h2 class="modalHeader" style="cursor:pointer" ng-click="memberInfo(member)">{{member.name}}</h2>
+			    <h2 class="modalHeader" id="memberInfo" style="cursor:pointer" ng-click="memberInfo(member)">{{member.name}}</h2>
 			    <br>
 			</div>    
 	    </div> 

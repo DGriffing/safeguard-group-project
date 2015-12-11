@@ -53,6 +53,9 @@ footer {
 h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
+.modalHeader:hover {
+    color: pink; }  
+
 #sign-me-up-button {
   background: #57bacc; }
 
