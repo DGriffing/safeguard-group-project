@@ -34,7 +34,7 @@
 		<div class="form-group">
 			<label for="roles">Your Role (Patient Or Caregiver):</label> <br>
 		    <label class="radio-inline">
-		      	<input type="radio" name="role" id="patient" value="patient" checked="checked">Patient
+		      	<input type="radio" name="role" id="patient" value="patient" >Patient
 		    </label>
 			<label class="radio-inline">
 		      	<input type="radio" name="role" id="caregiver" value="caregiver">Caregiver
@@ -73,6 +73,6 @@
 		<button type="submit" id="reset-button" class="btn btn-default" ng-click="reset(signUpForm)">Reset</button>
 		<!-- Submit Button -->
 
-		<button type="submit" id="sign-me-up-button" class="btn btn-primary" ng-click="submitForm(signUpForm); reset(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Up</button>
+		<button type="submit" id="sign-me-up-button" color="black" class="btn btn-primary" ng-click="submitForm(signUpForm); reset(signUpForm)" ng-disabled="signUpForm.$invalid">Sign Up</button>
 	</form>
 </div>
