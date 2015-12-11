@@ -49,12 +49,12 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 .controller('MembersCtrl', ['$scope', '$http', '$uibModal', '$filter', '$stateParams', function($scope, $http, $uibModal, $filter, $stateParams) {
     
-    //
+    // Connects to data on team members
     $http.get('data/members.json').then(function(response) {
         $scope.members = response.data;
     });  
 
-    //
+    // Connects Biographies to the information in data
     $scope.memberInfo = function(obj) {
         console.log(obj);
         $scope.selectedMember = obj;
@@ -69,7 +69,7 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
 
 .controller('BiosCtrl', ['$scope', '$http', '$uibModalInstance', function($scope, $http, $uibModalInstance) { 
     
-    //
+    // Closes biography modal when close button is clicked
     $scope.close = function () {
         $uibModalInstance.dismiss('close');
     };
@@ -169,53 +169,56 @@ angular.module('SafeguardApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'fire
             return false;
         }
         // If user's year is less than 2 years before current year...  
-        // If user's month hasn't already passed in current year, return false. 
+        // If user's month has already passed in current year, return false. 
         if(usersYear == yToday - 2 && monToday > userMonth) {
-        return false; 
+            return false; 
         }
         // If user's year is less than 2 years before current year... 
         // If user's month is same as current month..
         // If user's day is less than current day, return false.
         if(usersYear == yToday - 2 && userMonth == monToday && dayToday >= usersDay) {
-        return false; 
+            return false; 
         }
         // Otherwise, user's date is within the 2 year requirement, return true.
         return true;
     }
 
-    // Compares user's birthday to today's date and checks if user is 7+ 
+    // Returns 'False' if birthdate is within the last seven years 
     $scope.birthdateInput = function(birthdate){
-    var todaysDate = new Date(); 
-    var usersBirthdate = new Date(birthdate);
-    var dayToday = todaysDate.getDate();
-    var userDay = usersBirthdate.getDate();
-    var monthToday = todaysDate.getMonth();
-    var userMonth = usersBirthdate.getMonth();
-    var yearToday = todaysDate.getFullYear();
-    var userYear = usersBirthdate.getFullYear();
-    //If user's birthdate year is over 7 years before today's year, return true
-    if(yearToday - userYear > 7) { 
-    return true;
-    }
-    //If user's birthdate year is (yearToday - 7) and the user's birthday month has already 
-    //passed in this calendar year, return true. 
-    if(userYear == yearToday - 7 && monthToday > userMonth) {
-    return true; 
-    }
-    //If user's birthdate year is (yearToday - 7) and the month of the user's bday is the same
-    //as this year's current month and the the user's day of birth already passed or is 
-    //today in this current year, return true
-    if(userYear == yearToday - 7 && userMonth == monthToday && dayToday > userDay + 1) {
-    return true; 
-    }
-    //otherwise the user is under 7, return false 
-    return false;
+        var todaysDate = new Date(); 
+        var dayToday = todaysDate.getDate();
+        var monthToday = todaysDate.getMonth();
+        var yearToday = todaysDate.getFullYear();
+
+        var usersBirthdate = new Date(birthdate);
+        var userDay = usersBirthdate.getDate();
+        var userMonth = usersBirthdate.getMonth();
+        var userYear = usersBirthdate.getFullYear();
+
+        // If user's birth year is over 7 years before today's year, return true.
+        if(yearToday - userYear > 7) { 
+            return true;
+        }
+        // If user's birth year is over 7 years before today's year...
+        // If user's birth month has already passed in current year, return true.
+        if(userYear == yearToday - 7 && monthToday > userMonth) {
+            return true; 
+        }
+        // If user's birth year is over 7 years before today's year...
+        // If user's birth month is same as current month...
+        // If user's birth day is less than current day, return true.
+        if(userYear == yearToday - 7 && userMonth == monthToday && dayToday > userDay + 1) {
+            return true; 
+        }
+        // Otherwise, user's date is within 7 years, return false 
+        return false;
     }
 
 }])
 
 .controller('ConfirmationCtrl', ['$scope', '$http', '$uibModalInstance', function($scope, $http, $uibModalInstance) { 
-   $scope.close = function () {
-      $uibModalInstance.dismiss('close');
-   };
+    // Closes confirmation modal when close button is clicked
+    $scope.close = function () {
+        $uibModalInstance.dismiss('close');
+    };
 }])
