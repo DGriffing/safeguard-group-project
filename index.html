@@ -20,6 +20,10 @@
 
     <!-- load Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>    
+    <!-- JS Bootstrap for nav bar -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                   </button>
+                  <li id="logo"><a ui-sref="home">PATIENTS AS SAFEGUARDS |</a></li>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul>
@@ -45,16 +50,6 @@
                 </div>
             </div>
         </nav>
-
-    <!-- ORIGINAL Navigation Bar, same across all partials -->
-   <!--  <nav>
-        <ul class="container list-unstyled list-inline"> 
-            <li><a ui-sref="home">Patients As Safeguards</a></li>
-            <li><a ui-sref="members">Team Members</a></li>
-            <li><a ui-sref="projects">Publications</a></li>
-            <li><a ui-sref="form">Participate</a></li>
-        </ul>   
-    </nav> -->
 
     <!-- Partials Inserted Here -->
     <main>

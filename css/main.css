@@ -16,6 +16,14 @@ nav {
   top: 0px;
   z-index: 1;
   background: linear-gradient(to right, #57bacc, #ffffff); }
+  nav #logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 15px;
+    padding-top: 0.5em; }
   nav ul {
     margin: 0;
     padding: 0;

@@ -29,6 +29,16 @@ nav {
 	top: 0px;
 	z-index: 1;
 	background: linear-gradient(to right, $nav-color, $text-color); 
+
+	#logo {
+		font-family: $title-font;
+		font-size: 14px;
+		margin: 0;
+		padding: 0;
+		list-style: none; 
+		margin-left: 15px;
+		padding-top: 0.5em;
+	}
 	
 	ul {
 		margin: 0;
