@@ -2,6 +2,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 html {
   position: relative;
   min-height: 100%; }
@@ -50,11 +51,19 @@ footer {
     text-decoration: none;
     color: #ffffff; }
 
+#title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px; }
+
+#description {
+  font-size: 26px;
+  font-style: italic; }
+
 h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
 .modalHeader:hover {
-    color: pink; }  
+  color: #666666; }
 
 #sign-me-up-button {
   background: #57bacc; }

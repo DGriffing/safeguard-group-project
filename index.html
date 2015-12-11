@@ -23,16 +23,38 @@
 </head>
 
 <body>
-    
-    <!-- Navigation Bar, same across all partials -->
-    <nav>
-        <ul class="container list-unstyled list-inline">
+
+<header>
+        <!-- Navigation Bar with hamburger menu, same across all partials -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul>
+                        <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="home">Home</a></li>
+                        <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="members">Team Members</a></li>
+                        <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="projects">Publicatons</a></li>
+                        <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="form">Participate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- ORIGINAL Navigation Bar, same across all partials -->
+   <!--  <nav>
+        <ul class="container list-unstyled list-inline"> 
             <li><a ui-sref="home">Patients As Safeguards</a></li>
             <li><a ui-sref="members">Team Members</a></li>
             <li><a ui-sref="projects">Publications</a></li>
             <li><a ui-sref="form">Participate</a></li>
-        </ul>
-    </nav>
+        </ul>   
+    </nav> -->
 
     <!-- Partials Inserted Here -->
     <main>
