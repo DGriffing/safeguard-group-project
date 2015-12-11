@@ -169,6 +169,13 @@ h1, h2 {
 }
 
 @media (max-width: 768px) { 
+  	#hamburger {
+    	display: none;
+  	}
+
+  	#hamburger2 {
+   	 	visibility: visible;
+  	}
 
 	#homepage-image {
 		display: none;
@@ -179,7 +186,15 @@ h1, h2 {
 	}
 }
 
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
+  	#hamburger {
+   	 	display: none;
+  	}
+
+  	#hamburger2 {
+    	visibility: visible;
+  	}
+
 	#homepage-image {
 		width: 680px;
  		height: 375px;
@@ -187,6 +202,14 @@ h1, h2 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+  	#hamburger {
+    	display: none;
+  	}
+  	
+  	#hamburger2 {
+    	visibility: visible;
+  	}	
+
 	#homepage-image {
 		width: 910px;
  		height: 450px;

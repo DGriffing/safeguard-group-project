@@ -115,16 +115,36 @@ h1, h2 {
   font-size: 18px; }
 
 @media (max-width: 768px) {
+  #hamburger {
+    visibility: visible;
+  }
+  #hamburger2 {
+    display: none;
+  }
   #homepage-image {
     display: none; }
 
   main {
     margin-bottom: 100px; } }
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
+  #hamburger {
+    display: none;
+  }
+  #hamburger2 {
+    visibility: visible;
+  }
   #homepage-image {
     width: 680px;
-    height: 375px; } }
+    height: 375px; }
+  main {
+    margin-bottom: 100px; } }
 @media (min-width: 992px) and (max-width: 1200px) {
+  #hamburger {
+    display: none;
+  }
+  #hamburger2 {
+    visibility: visible;
+  }
   #homepage-image {
     width: 910px;
     height: 450px; } }

@@ -32,28 +32,36 @@
 <body>
 
 <header>
-    <!-- Navigation Bar with hamburger menu, same across all partials -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
-                  </button>
-                  <li id="logo">PATIENTS AS SAFEGUARDS |</li>
-                </div>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul>
-                    <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="home">Home</a></li>
-                    <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="members">Team Members</a></li>
-                    <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="projects">Publicatons</a></li>
-                    <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="form">Participate</a></li>
-                </ul>
-            </div>
-        </div>
     </nav>
-
+        <!-- Navigation Bar with hamburger menu, same across all partials -->
+            <nav class="navbar navbar-default" id="hamburger">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                      </button>
+                      <li id="logo"><a ui-sref="home">PATIENTS AS SAFEGUARDS |</a></li>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul>
+                            <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="home">Home</a></li>
+                            <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="members">Team Members</a></li>
+                            <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="projects">Publicatons</a></li>
+                            <li data-toggle="collapse" data-target=".navbar-collapse"> <a ui-sref="form">Participate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <nav class ="showOnBigger" id="hamburger2">
+            <a ui-sref="home">PATIENTS AS SAFEGUARDS |</a>
+            <a ui-sref="home">Home</a>
+            <a ui-sref="members">Team Members</a>
+            <a ui-sref="projects">Publicatons</a>
+            <a ui-sref="form">Participate</a>
+        </nav>
+    </nav>
     <!-- Partials Inserted Here -->
     <main>
         <div class="container">
