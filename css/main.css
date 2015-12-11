@@ -54,6 +54,10 @@ footer {
 h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
+#sign-me-up-button {
+  color: black;
+  background: linear-gradient(to right, #57bacc, #ffffff); }
+  
 .content {
   font-family: "Raleway", sans-serif;
   font-size: 16px; }
