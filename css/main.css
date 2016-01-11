@@ -147,7 +147,7 @@ h1, h2 {
     visibility: visible;
   }
   #homepage-image {
-    width: 910px;
+    width: 100%;
     height: 450px; } }
 #reset-button {
   margin-bottom: 40px; }
